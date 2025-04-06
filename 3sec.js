@@ -50,6 +50,19 @@ summary.onclick = function(){
     )
 
 }
+const xValues = ["Red","Blue","yellow"];
+const yValues = [3, 2, 1];
+const colors = ["red", "blue", "yellow"];
+const myChart = new Chart("Scores",{
+    type:"bar",
+    data:{
+        labels: xValues,
+        datasets:[{
+            backgroundColor: colors,
+            data: yValues
+        }]
+    }
+});
 
 
 
