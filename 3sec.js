@@ -1,6 +1,14 @@
-const button = document.getElementById("button");
+
 button.onclick = function() {
-    button.value = "Stop";
+    if (button.value === "Start") {
+        button.value = "Stop";
+    } else {
+        button.value = "Start";
+    }
 };
+
+
+
+
 
 
