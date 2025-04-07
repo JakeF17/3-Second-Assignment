@@ -45,10 +45,19 @@ attemptsButton.onclick = function () {
     }
 };
 summary.onclick = function(){
-    $("#summary").append(
-        attemptsLog.length
-    )
-
+    if (attemptsLog.length >0){
+        let max = attemptsLog[0].time;
+        let min = attempstLog[0].time;
+        for (i = 1; i < attemptsLog.length; i++) {
+            const newAttempt = attempsLog[i].time;
+            if (newAttempt > max){
+                max = newAttempt;
+            }
+            if (newAttempt < min){
+                min = newAttempt;
+            }
+        }
+    }
 }
 const xValues = ["Red","Blue","yellow"];
 const yValues = [3, 2, 1, 0];
